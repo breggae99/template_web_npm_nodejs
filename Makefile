@@ -28,7 +28,7 @@ install_basic_modules:
 	npm i moment --save
 	npm i react --save
 	npm i prop-types --save
-	npm i jquery --save
+	#npm i jquery --save
 	#npm i vue --save
 	#npm i angular --save
 
@@ -42,7 +42,7 @@ install_nodemon:
 	sudo npm install -g nodemon
 
 # start nodemon
-start:
+start: sass
 	nodemon
 
 #Node JS debugging
