@@ -1,0 +1,63 @@
+// -- For Light Theme set true --
+$lightMode: false
+// ------------------------------
+
+$light-background: #e4f2f1
+$light-text: #013161
+
+$dark-background: #141414
+$dark-text: #d2e1dd
+$dark-link-hover: rgb(173, 250, 255)
+$dark-card-background: #555555
+$dark-navbar-hover: $dark-card-background
+
+// Links
+@mixin link-hover-color($light-theme: $lightMode)
+  @if $light-theme == false
+    color: $dark-link-hover
+
+// Cards
+@mixin card-color($light-theme: $lightMode)
+  @if $light-theme == false
+    background-color: $dark-card-background
+    border-color: #dddddd
+  @else 
+    border-color: #3a3a3a5e
+
+@mixin card-hover-color($light-theme: $lightMode)
+  @if $light-theme == false
+    // box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit
+    // box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.8), 0 6px 20px 0 rgba(255, 255, 255, 0.79)
+    box-shadow: inset 0px 0px 30px 0px rgba(255, 255, 255, 0.8), 0px 0px 20px 0px rgba(255, 255, 255, 0.78)
+  @else 
+    box-shadow: 0px 4px 30px 3px rgba(0, 0, 0, 0.2), 0 6px 20px 3px rgba(0, 0, 0, 0.18)
+
+// Body
+@mixin theme-colors($light-theme: $lightMode)
+  @if $light-theme
+    background-color: $light-background
+    color: $light-text
+  @else
+    background-color: $dark-background
+    color: $dark-text
+
+// Navbar
+@mixin navbar-ul-color($light-theme: $lightMode)
+  @if $light-theme == false
+    background-color: $dark-background
+  @else 
+    background-color: $light-background
+
+@mixin navbar-li-color($light-theme: $lightMode)
+  @if $light-theme == false
+    color: $dark-text
+  @else 
+    color: $light-text
+
+@mixin navbar-li-hover-color($light-theme: $lightMode)
+  @if $light-theme == false
+    background-color: $dark-navbar-hover
+    color: white
+  @else 
+    background-color: $light-background
+    color: black
