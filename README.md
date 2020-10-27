@@ -1,5 +1,5 @@
 # template_web_npm
-Template for Web Dev. on Ubuntu
+Template for Web Dev. optimised for Linux (Ubuntu)
 
 Use Makefile to init npm packages and add dependencies.
 e.g: 
