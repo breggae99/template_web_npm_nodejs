@@ -16,14 +16,6 @@ $dark-navbar-hover: $dark-card-background
   @if $light-theme == false
     color: $dark-link-hover
 
-// Cards
-@mixin card-color($light-theme: $lightMode)
-  @if $light-theme == false
-    background-color: $dark-card-background
-    border-color: #dddddd
-  @else 
-    border-color: #3a3a3a5e
-
 @mixin card-hover-color($light-theme: $lightMode)
   @if $light-theme == false
     // box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit
